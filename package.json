@@ -19,5 +19,9 @@
   "devDependencies": {
     "mocha": "^6.0.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mr-Skribbls/js-xml-binding"
+  }
 }

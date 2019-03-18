@@ -1,0 +1,23 @@
+{
+  "name": "js-xml-binding",
+  "version": "1.0.0",
+  "description": "bind xml to js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "bind",
+    "xml",
+    "js",
+    "binding",
+    "2 way",
+    "two way"
+  ],
+  "author": "Mr-Skribbls",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^6.0.2"
+  },
+  "dependencies": {}
+}

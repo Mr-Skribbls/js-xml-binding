@@ -11,9 +11,16 @@ $ npm install --save js-xml-binding
 ## Usage
 
 ### Binding to a file
+```xml
+<!-- people.xml -->
+<?xml version="1.0" encoding="utf-8"?>
+<people xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance", xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</people>
+```
+
 ```js
 const xmlBinding = require('js-xml-binding');
-const binding = xmlBinding.bind('path_to_file.xml');
+const binding = xmlBinding.bind('./people.xml');
 ```
 
 ### Creating elements
@@ -43,12 +50,16 @@ binding.then(root => {
 });
 ```
 ```xml
-<person age="23">
-  <name>Fred</name>
-</person>
-<person>
-  <name>Frank</name>
-</person>
+<!-- people.xml -->
+<?xml version="1.0" encoding="utf-8"?>
+<people xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance", xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <person age="23">
+    <name>Fred</name>
+  </person>
+  <person>
+    <name>Frank</name>
+  </person>
+</people>
 ```
 
 ### Finding an element
@@ -66,12 +77,16 @@ const frank = findPerson('name', 'Frank');
 frank.addAttribute(new xmlBinding.Attribute('age', '12'));
 ```
 ```xml
-<person age="23">
-  <name>Fred</name>
-</person>
-<person age="12">
-  <name>Frank</name>
-</person>
+<!-- people.xml -->
+<?xml version="1.0" encoding="utf-8"?>
+<people xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance", xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <person age="23">
+    <name>Fred</name>
+  </person>
+  <person age="12">
+    <name>Frank</name>
+  </person>
+</people>
 ```
 
 

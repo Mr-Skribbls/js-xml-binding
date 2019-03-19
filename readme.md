@@ -73,8 +73,9 @@ function findPerson(tag, content) {
   });
 }
 
-const frank = findPerson('name', 'Frank');
-frank.addAttribute(new xmlBinding.Attribute('age', '12'));
+findPerson('name', 'Frank').then(frank => {
+  frank.addAttribute(new xmlBinding.Attribute('age', '12'));
+});
 ```
 ```xml
 <!-- people.xml -->

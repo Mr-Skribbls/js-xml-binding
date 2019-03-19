@@ -54,10 +54,10 @@ binding.then(root => {
 ### Finding an element
 
 ```js
-function findPerson(property, value) {
-  return usersBinding.then(r => {
-    return r.childTags.find(user => {
-      return !!user.findChild(property, value);
+function findPerson(tag, content) {
+  return binding.then(r => {
+    return r.childTags.find(person => {
+      return !!person.findChild(tag, content);
     });
   });
 }

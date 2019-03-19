@@ -10,6 +10,8 @@ $ npm install --save js-xml-binding
 
 ## Usage
 
+Creating elements
+
 ```js
 const xmlBinding = require('js-xml-binding');
 

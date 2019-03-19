@@ -9,6 +9,7 @@ $ npm install --save js-xml-binding
 ```
 
 ## Usage
+
 ```js
 const xmlBinding = require('js-xml-binding');
 
